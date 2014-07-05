@@ -1,8 +1,8 @@
 .DS_Store
 .*.sw?
 composer.lock
-vendor/
-logs/
+/vendor/
+/logs/
 /files/
 devConfig.php
 index.php
