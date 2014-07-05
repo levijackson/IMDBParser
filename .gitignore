@@ -1,0 +1,8 @@
+.DS_Store
+.*.sw?
+composer.lock
+vendor/
+logs/
+files/
+devConfig.php
+index.php

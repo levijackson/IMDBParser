@@ -1,0 +1,11 @@
+{
+    "name" : "IMDBParser/composer",
+    "description" : "IMDB Parser",
+    "license" : "MIT",
+    "require" : {
+        "illuminate/database": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "4.1.*"
+    }
+}

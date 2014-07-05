@@ -1,0 +1,23 @@
+<?php
+chdir(dirname(__FILE__) . '/../');
+
+include_once('./bootstrap.php');
+
+$dir = './database/migrations';
+
+foreach (new DirectoryIterator($dir) as $file) {
+    if($file->isDot()) {
+        continue;
+    }
+
+    $className = '\\IMDBParser\\Database\Migrations\\' . str_replace('.php', '', $file->getFilename());
+    $migration = new $className($conn);
+    $migration->dropIfExists();
+    $migration->up();
+
+    if (method_exists($migration, 'seedData')) {
+        $migration->seedData();
+    }
+
+    echo $className . ' processed.' . "\n";
+}

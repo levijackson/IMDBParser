@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit backupGlobals="false" colors="true" bootstrap="bootstrap.php">
+    <php>
+        <const name="PHPUNIT_IMDBParser_TESTSUITE" value="true"/>
+    </php>
+    <testsuites>
+        <testsuite name="Models">
+            <directory>Tests/Models/</directory>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <blacklist>
+            <directory>vendor</directory>
+        </blacklist>
+    </filter>
+</phpunit>
