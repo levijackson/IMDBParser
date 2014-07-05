@@ -3,6 +3,6 @@
 composer.lock
 vendor/
 logs/
-files/
+/files/
 devConfig.php
 index.php
